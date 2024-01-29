@@ -34,7 +34,7 @@ function handleClick(){
             break;
     }
 }
-for(var i=0;i<1;i++){
+
     document.addEventListener("keydown",(event) =>{
         var letter=event.isComposing || event.key;
         switch (letter) {
@@ -72,7 +72,7 @@ for(var i=0;i<1;i++){
         }
       });
 
-}
+
 for (var i = 0; i <document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click",handleClick)
 
