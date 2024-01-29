@@ -34,7 +34,7 @@ function handleClick(){
             break;
     }
 }
-for(var i=0;i<document.querySelectorAll(".drum").length;i++){
+for(var i=0;i<1;i++){
     document.addEventListener("keydown",(event) =>{
         var letter=event.isComposing || event.key;
         switch (letter) {
