@@ -11,9 +11,8 @@ for (var i = 0; i <document.querySelectorAll(".drum").length; i++) {
 // FOR DETECTING BUTTON PRESS.
 
 document.addEventListener("keydown",function(event){
-        makeSound(event.key);
+    makeSound(event.key);
 });
-
 // FUNCTION TO CREATE SOUND.
 function makeSound(key){
         switch (key) {
