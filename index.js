@@ -1,19 +1,16 @@
-// FOR DETECTING CLICK.
-
 for (var i = 0; i <document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
         var ButtoninnerHTML=this.innerHTML;
         makeSound(ButtoninnerHTML);
+        ButtonAnimation(ButtoninnerHTML);
     });
     
 }
 
-// FOR DETECTING BUTTON PRESS.
-
 document.addEventListener("keydown",function(event){
     makeSound(event.key);
+    ButtonAnimation(event.key);
 });
-// FUNCTION TO CREATE SOUND.
 function makeSound(key){
         switch (key) {
             case "w":
@@ -50,4 +47,11 @@ function makeSound(key){
         }
       
 }
+function ButtonAnimation(event){
+    
+    document.querySelector("."+event).classList.add("pressed");
+    setTimeout(function(){
+        document.querySelector("."+event).classList.remove("pressed");
+    },100)
 
+}
